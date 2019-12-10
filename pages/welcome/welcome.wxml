@@ -1,0 +1,4 @@
+<!--pages/welcome/welcome.wxml-->
+<view class="welcome">
+    <image src="../../images/welcome.jpg" class="bg-image" mode="scaleToFill"></image>
+</view>
