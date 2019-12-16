@@ -1,1 +1,53 @@
-/* pages/register/register.wxss */
+/* 这是容器的样式 */
+.container{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx;
+}
+
+input{
+  border: 2rpx solid  #336699;
+  height: 90rpx;
+  border-radius: 12rpx;
+  padding-left: 16rpx;
+}
+
+/*用户名输入框样式*/
+.user_name{
+  margin: 16rpx 0;
+}
+
+.pwd{
+  /* flex 是流式布局 */
+  display: flex;   
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 16rpx;
+}
+
+/* 密码输入框样式 */
+
+.user_pwd{
+  flex: 1;
+  /* flex=1的意思就是把剩余的空间都占完 */
+}
+
+/* 按钮样式 */
+
+.button{
+  display: flex;
+  flex-direction: row;
+}
+
+.btn{
+  background-color:#008842; 
+  width: 30%;
+  color: white;
+}
+
+
+
+
+
+

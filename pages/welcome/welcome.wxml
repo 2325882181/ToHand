@@ -1,4 +1,5 @@
 <!--pages/welcome/welcome.wxml-->
 <view class="welcome">
-    <image src="../../images/welcome.jpg" class="bg-image" mode="scaleToFill"></image>
+    <image src="../../images/welcome.jpg" class="bg-image" mode="aspectFit"></image>
+    <text class="bg-text">欢迎来到到手送</text>
 </view>

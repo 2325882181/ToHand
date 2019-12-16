@@ -1,8 +1,8 @@
 .title{
   display: block;
   text-align: center;
-  font-size: 50rpx;
-  font-weight: 500;
+  font-size: 70rpx;
+  font-weight: 600;
   margin: 10rpx 0;
 }
 
@@ -48,7 +48,6 @@ swiper video,image{
 
 .bottom button{
   color: white;
-
   width: 50%;
   background-color: rgb(250, 105, 226);
 }

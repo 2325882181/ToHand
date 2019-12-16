@@ -1,0 +1,44 @@
+<view class="container">
+  <!-- 未登录状态 -->
+  <view wx:if="{{!loginOK}}" class="userinfo" style="margin-bottom:50rpx;">
+		<image class="userinfo-avatar" src="/images/nologin.png" 
+    background-size="cover"></image>
+    <navigator url="/pages/login/login" hover-class="none" class="mini-btn">
+    	<button class="weui-btn mini-btn" plain="true" size="mini" open-type="getUserInfo">
+      点击登录/注册账户</button>
+    </navigator>
+	</view>
+  <!-- 登录成功状态 -->
+  <view wx:else class="userinfo">
+    <image class="userinfo-avatar" src="/images/login.jpg" 
+    background-size="cover"></image>
+      <view class="login-name">
+        <text>{{name}}</text>
+      </view>
+  </view>
+  <view style="height:20rpx;background: #eee;width:100%;"></view>
+  <view class="my-item" bindtap="sign_in">
+    <navigator url="/pages/asset/index" hover-class="navigator-none">每日签到</navigator>
+  </view>
+  <view class="my-item">
+    <navigator url="/pages/address/address" hover-class="navigator-none">收货地址
+    </navigator>
+  </view>
+  <view class="my-item" bindtap="attention">
+    <navigator url="/pages/asset/index" hover-class="navigator-none">我的关注</navigator>
+  </view>
+  <view class="my-item" bindtap="comment">
+    <navigator url="/pages/asset/index" hover-class="navigator-none">我的评价</navigator>
+  </view>
+  <view class="my-item" bindtap="ticket">
+    <navigator url="/pages/coupons/index" hover-class="navigator-none">领券中心</navigator>
+  </view>
+  <view style="height:20rpx;background: #eee;width:100%;"></view>
+  <view class="my-item" bindtap="aboutUs">
+    关于我们
+  </view>
+  <view style="height:20rpx;background: #eee;width:100%;"></view>
+  <view wx:if="{{loginOK}}" class="logout" bindtap="loginOut">
+    <button class="logout-btn" type="warn">退出登录</button>
+  </view>
+</view>

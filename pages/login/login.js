@@ -1,114 +1,86 @@
-// pages/login/login.js
+const db = wx.cloud.database().collection("user")
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    phone_number:'',
-    code:''
+    zhanghao: '',
+    mima: ''
   },
 
-  //获取手机号码
-  getPhone:function(e){
-    this.setData(
-      {
-        phone_number:e.detail.value
-      }
-    )
-    if (this.data.phone_number.length != 11) {
-      wx.showToast({
-        title: '手机号码错误',
-      })
-      return;
-    }
-      console.log(this.data.phone_number)
-  },
-
-//获取验证码
-  getCode: function (e) {
-    this.setData(
-      {
-        code: e.detail.value
-      }
-    )
-    console.log(this.data.code)
-  },
-//登录的方法
-  login: function () {
-    wx.request({
-      url: 'http://www.hengyishun.cn/login/login',
-      data: ({
-        phone: this.data.phone_number,
-        code: this.data.code
-      })
-      ,
-      success(res) {
-        if (res.data == "true") {
-          wx.showToast({
-            title: '登陆成功',
-          });
-          wx.switchTab({
-            url: '../index/index'
-          })
-        }
-      }
+  //获取输入的账号
+  getZhangHao(event) {
+    //console.log('账号', event.detail.value)
+    this.setData({
+      zhanghao: event.detail.value
     })
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  //获取输入的密码
+  getMima(event) {
+    // console.log('密码', event.detail.value)
+    this.setData({
+      mima: event.detail.value
+    })
+  },
+
+  //点击登陆
+  login() {
+    let zhanghao = this.data.zhanghao
+    let mima = this.data.mima
+    console.log('账号', zhanghao, '密码', mima)
+    if (zhanghao.length < 4) {
+      wx.showToast({
+        icon: 'none',
+        title: '账号至少4位',
+      })
+      return
+    }
+    if (mima.length < 4) {
+      wx.showToast({
+        icon: 'none',
+        title: '账号至少4位',
+      })
+      return
+    }
+
+    //登陆
+    wx.cloud.database().collection('user').where({
+      zhanghao: zhanghao
+    }).get({
+      success(res) {
+        console.log("获取数据成功", res)
+        let user = res.data[0]
+        console.log("user", user)
+        if (mima == user.mima) {
+          console.log('登陆成功')
+          wx.showToast({
+            title: '登陆成功',
+          })
+          // wx.navigateTo({
+          //   url: '../home/home?name=' + user.name,
+          // })
+          wx.reLaunch({
+            url: '../my/my',
+          })
+          //保存用户登陆状态
+          wx.setStorageSync('user', user)
+        } else {
+          console.log('登陆失败')
+          wx.showToast({
+            icon: 'none',
+            title: '账号或密码不正确',
+          })
+        }
+      },
+      fail(res) {
+        console.log("获取数据失败", res)
+      }
+    })
 
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  //注册
+    toregister() {
+    wx.navigateTo({
+      url: '../register/register',
+    })
   }
 })

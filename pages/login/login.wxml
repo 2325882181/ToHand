@@ -1,15 +1,12 @@
 <view class="container">
    <text>欢迎登陆到手送</text>
-    <view class="logo_img">
-      <image src="../../images/login_logo.jpg" class="img_login"></image>
-    </view>
-   <input type="number" class="phone_number" bindblur="getPhone" placeholder="请输入手机号码"></input>
-   <view class="code">
-      <input class="code_number" bindblur="getCode" placeholder="请输入验证码"></input>
-      <button class="btn_code">获取验证码</button>
+   <input class="user_name" bindinput="getZhangHao" placeholder="请输入手机号"></input>
+   <view class="pwd">
+      <input class="user_pwd" bindblur="getMima" placeholder="请输入密码"></input>
    </view>
-   <view>
-    <button class="btn_login" bindtap="login">商城登陆</button>
+   <view class="button">
+    <button class="btn" bindtap="toregister">注册</button>
+    <button class="btn" bindtap="login">登陆</button>
    </view>
 </view>
 

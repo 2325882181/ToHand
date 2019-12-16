@@ -12,6 +12,30 @@ Page({
         "name": "老鸭面",
         "src": "../../images/menu/menu1.jpg",
         "price": 12
+      },
+      {
+        "id": 1,
+        "name": "老鸭面",
+        "src": "../../images/menu/menu1.jpg",
+        "price": 12
+      },
+      {
+        "id": 1,
+        "name": "老鸭面",
+        "src": "../../images/menu/menu1.jpg",
+        "price": 12
+      },
+      {
+        "id": 1,
+        "name": "老鸭面",
+        "src": "../../images/menu/menu1.jpg",
+        "price": 12
+      },
+      {
+        "id": 1,
+        "name": "老鸭面",
+        "src": "../../images/menu/menu1.jpg",
+        "price": 12
       }
   ],
       price:0

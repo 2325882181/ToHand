@@ -1,0 +1,23 @@
+<view class="container">
+    <navigator url="../address/address">
+        <view wx:if="{{hasAddress}}" class="pay-address">
+            <text class="pay-address-name">收货人: {{address.name}}</text>
+            <text class="pay-address-phone">电话: {{address.phone}}</text>
+            <view class="pay-address-detail">{{address.detail}}</view>
+        </view>
+        <view wx:else class="pay-no-address">添加收货地址</view>
+    </navigator>
+
+    <view class="pay-box">
+        <view wx:for="{{productList}}" wx:key="index" class="productList-list">
+            <image class="pay-thumb" src="{{item.image}}" mode="widthFix"></image>
+            <view class="pay-pro-name">{{item.name}}</view>
+            <view class="pay-pro-price">￥{{item.price}}</view>
+        </view>
+    </view>
+
+    <view class="pay-footer">
+        <view class="pay-footer-total">付款合计：￥{{total}}</view>
+        <view class="pay-footer-btn" bindtap="toPay">去付款</view>
+    </view>
+</view>

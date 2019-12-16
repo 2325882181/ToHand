@@ -2,20 +2,22 @@
   "pages": [
     "pages/welcome/welcome",
     "pages/index/index",
+    "pages/pay/pay",
+    "pages/address/address",
     "pages/login/login",
-    "pages/reply/reply",
-    "pages/menu/menu",
+    "pages/foodcircle/foodcircle",
     "pages/cart/cart",
+    "pages/my/my",
     "pages/detail/detail",
     "pages/register/register"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#576b95",
+    "navigationBarBackgroundColor": "#008842",
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "到手送",
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light",
-    "enablePullDownRefresh": false
+    "enablePullDownRefresh": true
   },
   "tabBar": {
     "list": [
@@ -26,25 +28,19 @@
         "selectedIconPath": "images/home_select.png"
       },
       {
-        "pagePath": "pages/menu/menu",
-        "text": "菜单",
-        "iconPath": "images/menu.png",
-        "selectedIconPath": "images/menu_select.png"
-      },
-      {
-        "pagePath": "pages/reply/reply",
-        "text": "评论",
-        "iconPath": "images/reply.jpg",
-        "selectedIconPath": "images/reply_select.jpg"
+        "pagePath": "pages/foodcircle/foodcircle",
+        "text": "美食圈",
+        "iconPath": "images/foodcircle.png",
+        "selectedIconPath": "images/foodcircle_select.png"
       },
       {
         "pagePath": "pages/cart/cart",
-        "text": "购物车",
-        "iconPath": "images/car.png",
-        "selectedIconPath": "images/car_select.png"
+        "text": "订单",
+        "iconPath": "images/community.png",
+        "selectedIconPath": "images/community_select.png"
       },
       {
-        "pagePath": "pages/login/login",
+        "pagePath": "pages/my/my",
         "text": "我的",
         "iconPath": "images/my.png",
         "selectedIconPath": "images/my_select.png"
