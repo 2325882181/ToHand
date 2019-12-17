@@ -28,7 +28,7 @@
    </view>
 </view>
 
-<!-- 产品列表 -->
+<!-- 商家列表 -->
 <text class="hot"> 精选店家 </text>
 <view class="wrap"> 
 <navigator url="/pages/menu/menu?id={{item.id}}" wx:for="{{storeList}}" wx:key="{{index}}" class="product">

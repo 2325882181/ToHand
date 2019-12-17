@@ -10,8 +10,7 @@
 	</view>
   <!-- 登录成功状态 -->
   <view wx:else class="userinfo">
-    <image class="userinfo-avatar" src="/images/login.jpg" 
-    background-size="cover"></image>
+    <image class="userinfo-avatar" src="/images/login.jpg" background-size="cover"></image>
       <view class="login-name">
         <text>{{name}}</text>
       </view>

@@ -6,8 +6,58 @@ Page({
    */
   data: {
     productId: "",
-    detailList: [],
-    id: ""
+    productList: [],
+    index: "",
+    detailList: [
+      {
+        "id": 1,
+        "name": "牛肉拉面",
+        "src1": "../../images/nrlm/nrlm1.jpg",
+        "src2": "../../images/nrlm/nrlm2.jpg",
+        "src3": "../../images/nrlm/nrlm3.jpg",
+        "price": 9
+      },
+      {
+        "id": 2,
+        "name": "鸡蛋拉面",
+        "src1": "../../images/jdlm/jdlm1.jpg",
+        "src2": "../../images/jdlm/jdlm2.jpg",
+        "src3": "../../images/jdlm/jdlm3.jpg",
+        "price": 8
+      },
+      {
+        "id": 3,
+        "name": "牛肉炒刀削",
+        "src1": "../../images/nrcdx/nrcdx1.jpg",
+        "src2": "../../images/nrcdx/nrcdx2.jpg",
+        "src3": "../../images/nrcdx/nrcdx3.jpg",
+        "price": 10
+      },
+      {
+        "id": 4,
+        "name": "鸡蛋炒刀削",
+        "src1": "../../images/jdcdx/jdcdx1.jpg",
+        "src2": "../../images/jdcdx/jdcdx2.jpg",
+        "src3": "../../images/jdcdx/jdcdx3.jpg",
+        "price": 10
+      },
+      {
+        "id": 5,
+        "name": "水饺",
+        "src1": "../../images/sj/sj1.jpg",
+        "src2": "../../images/sj/sj2.jpg",
+        "src3": "../../images/sj/sj3.jpg",
+        "price": 12
+      },
+      {
+        "id": 6,
+        "name": "大盘鸡",
+        "src1": "../../images/dpj/dpj1.jpg",
+        "src2": "../../images/dpj/dpj2.jpg",
+        "src3": "../../images/dpj/dpj3.jpg",
+        "price": 50
+      }
+    ]
   },
 
   /**
@@ -15,13 +65,13 @@ Page({
    */
   onLoad: function (options) {
     var product = JSON.parse(options.productAll);           //获得数组
-    var id = options.id;                              //获得餐品id
+    var index = options.index;                              //获得餐品id
     //查看传值是否成功
-    console.log(product);                                 
-    console.log(id);
+    console.log(product);    
+    console.log(product[index].id);                             
     this.setData({
-      detailList: product,
-      id: id
+      productList: product,
+      index: index
     })
   },
 

@@ -37,7 +37,6 @@ navigator{
 
 .my-item{
     width: 100%;
-    background-size: 16rpx auto,750rpx auto;
     border-bottom: 1px solid #eee;
     height: 80rpx;
     padding-left: 50rpx;

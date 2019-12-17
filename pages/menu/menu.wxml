@@ -13,7 +13,7 @@
       <view class="productList" wx:for="{{productList ==''?productAll:productList}}"
       wx:key="{{index}}">
         <image src="{{item.src}}" mode="widthFix" bindtap="todetail"
-        data-id="{{item.id}}"></image>
+        data-index="{{index}}"></image>
         <view class="info">
           <text>{{item.name}}</text>
           <text>￥{{item.price}}</text>

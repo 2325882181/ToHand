@@ -1,40 +1,18 @@
-// pages/pay/pay.js
+// pages/order/order.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    address: {},
-    hasAddress: false,
-    total: 0,
-    productList: []
-  },
 
-  toPay: function () {
-    wx.switchTab({
-      url: '/pages/order/order'
-    });
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var product = JSON.parse(options.productAll);     //获得数组
-    //查看传值是否成功
-    console.log(product);         
-    var list = [];
-    for (var i = 0; i < product.length; i++) {
-      if (product[i].num > 0) {
-        list.push(product[i])
-      }
-    }
-    this.setData({
-      total: options.total,
-      productList: list
-    })
-    console.log(list)
+
   },
 
   /**
@@ -48,16 +26,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    const self = this;
-    wx.getStorage({
-      key: 'address',
-      success(res) {
-        self.setData({
-          address: res.data,
-          hasAddress: true
-        })
-      }
-    })
+
   },
 
   /**

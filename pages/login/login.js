@@ -54,9 +54,6 @@ Page({
           wx.showToast({
             title: '登陆成功',
           })
-          // wx.navigateTo({
-          //   url: '../home/home?name=' + user.name,
-          // })
           wx.reLaunch({
             url: '../my/my',
           })

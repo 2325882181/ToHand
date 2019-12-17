@@ -9,7 +9,21 @@ Page({
       name: '',
       phone: '',
       detail: ''
-    }
+    },
+  },
+
+  // 获取地理位置
+  chooseLocation: function () {
+    var that = this;
+    wx.chooseLocation({
+      success: function (res) {
+        console.log(res.name);
+        console.log(res.address);
+        that.setData({
+          'address.detail': res.name
+        })
+      }
+    }); 
   },
 
   /**
@@ -27,6 +41,8 @@ Page({
       }
     })
   },
+  
+  // 保存
   formSubmit() {
     var self = this;
     if (self.data.address.name && self.data.address.phone && self.data.address.detail) {

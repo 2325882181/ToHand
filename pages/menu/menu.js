@@ -70,7 +70,7 @@ Page({
         "id": 5,
         "name": "水饺",
         "src": "../../images/menu/menu5.jpg",
-        "price": 15,
+        "price": 12,
         "classid": 3,
         "num": 0
       },
@@ -78,7 +78,7 @@ Page({
         "id": 6,
         "name": "大盘鸡",
         "src": "../../images/menu/menu6.jpg",
-        "price": 15,
+        "price": 50,
         "classid": 4,
         "num": 0
       }
@@ -195,13 +195,11 @@ Page({
    * 跳转详情页面
    */
   todetail: function(e){
-     var id = e.currentTarget.dataset;                       //获取餐品id
-     console.log("id为：" + e.currentTarget.dataset.id);     //检验是否获取成功
     var list = JSON.stringify(this.data.productAll);        //获取餐品列表
-    // let index = e.currentTarget.dataset.index;              //获取餐品index
-    // console.log("index为：" + e.currentTarget.dataset.index);     //检验是否获取成功
+    let index = e.currentTarget.dataset.index;              //获取餐品index
+    console.log("index为：" + e.currentTarget.dataset.index);     //检验是否获取成功
     wx.navigateTo({
-      url: '/pages/detail/detail?id=' + id + '&productAll=' + list
+      url: '/pages/detail/detail?index=' + index + '&productAll=' + list
     });
   },
 

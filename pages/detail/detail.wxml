@@ -2,25 +2,25 @@
   <text class="title">产品详情</text>
     <swiper autoplay="true" circular="true" bindicator-dots="true"> 
     <swiper-item>
-    <image src="../../images/nrlm/nrlm1.jpg"></image>
+    <image src="{{detailList[index].src2}}"></image>
     </swiper-item>
      <swiper-item>
-    <image src="../../images/nrlm/nrlm2.jpg"></image>
+    <image src="{{detailList[index].src3}}"></image>
     </swiper-item>
      <swiper-item>
-    <image src="../../images/nrlm/nrlm3.jpg"></image>
+    <image src="{{detailList[index].src1}}"></image>
     </swiper-item>
     </swiper>
     <view class="info">
-      <text class="name">{{item.name}}</text>
-      <text class="price">￥{{item.price}}</text>
+      <text class="name">{{detailList[index].name}}</text>
+      <text class="price">￥{{detailList[index].price}}</text>
     </view>
 
 
     <text class="title">产品实拍</text>
     <view class="wrap">
-        <image src="../../images/nrlm/nrlm1.jpg" mode="widthFix"> </image>
-        <image src="../../images/nrlm/nrlm2.jpg" mode="widthFix"> </image>
-        <image src="../../images/nrlm/nrlm3.jpg" mode="widthFix"> </image>
+        <image src="{{detailList[index].src1}}" mode="widthFix"> </image>
+        <image src="{{detailList[index].src2}}" mode="widthFix"> </image>
+        <image src="{{detailList[index].src3}}" mode="widthFix"> </image>
     </view>
 </scroll-view>
