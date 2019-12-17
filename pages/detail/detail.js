@@ -5,33 +5,25 @@ Page({
    * 页面的初始数据
    */
   data: {
-     productId:""
+    productId: "",
+    detailList: [],
+    id: ""
   },
-  /**添加到购物车 */
-  addCar(){
-    //将数据存储到本地的同步方法
-     wx.setStorageSync("id", this.data.productId);
-     //模态窗口友好提示
-     wx.showModal({
-       title: '购物车提示',
-       content: '产品添加到购物车成功',
-     })
-  },
-
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var product = JSON.parse(options.productAll);           //获得数组
+    var id = options.id;                              //获得餐品id
+    //查看传值是否成功
+    console.log(product);                                 
+    console.log(id);
     this.setData({
-      productId:options.id,
-      
-    })  
-
-
+      detailList: product,
+      id: id
+    })
   },
-
-
 
   /**
    * 生命周期函数--监听页面初次渲染完成

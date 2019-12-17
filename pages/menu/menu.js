@@ -29,6 +29,7 @@ Page({
       }
     ],
     curIndex: 0,
+    totalPrice: 0,
     // 分类后的产品列表
     productList:[],
     // 初始数据
@@ -89,7 +90,7 @@ Page({
     var p = this.data.productAll;
     var id = e.currentTarget.id;
     console.log(e);
-    var list = []
+    var list = [];
     for(var i=0;i<p.length;i++){
       if(id == 0){
         list.push(p[i])
@@ -188,6 +189,30 @@ Page({
         totalPrice: total.toFixed(2)
       });
     }
+  },
+
+  /**
+   * 跳转详情页面
+   */
+  todetail: function(e){
+     var id = e.currentTarget.dataset;                       //获取餐品id
+     console.log("id为：" + e.currentTarget.dataset.id);     //检验是否获取成功
+    var list = JSON.stringify(this.data.productAll);        //获取餐品列表
+    // let index = e.currentTarget.dataset.index;              //获取餐品index
+    // console.log("index为：" + e.currentTarget.dataset.index);     //检验是否获取成功
+    wx.navigateTo({
+      url: '/pages/detail/detail?id=' + id + '&productAll=' + list
+    });
+  },
+
+  /**
+   * 跳转支付页面
+   */
+  buy: function () {
+    var list = JSON.stringify(this.data.productAll);
+    wx.navigateTo({
+      url: '/pages/pay/pay?total=' + this.data.totalPrice + '&productAll=' + list
+    });
   },
 
   /**

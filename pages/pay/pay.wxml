@@ -8,16 +8,19 @@
         <view wx:else class="pay-no-address">添加收货地址</view>
     </navigator>
 
+    <!-- 餐品列表 -->
     <view class="pay-box">
         <view wx:for="{{productList}}" wx:key="index" class="productList-list">
-            <image class="pay-thumb" src="{{item.image}}" mode="widthFix"></image>
+            <image class="pay-thumb" src="{{item.src}}" mode="widthFix"></image>
             <view class="pay-pro-name">{{item.name}}</view>
             <view class="pay-pro-price">￥{{item.price}}</view>
+            <view class="pay-pro-num">X{{item.num}}</view>
         </view>
     </view>
 
+    <!-- 底部框 -->
     <view class="pay-footer">
-        <view class="pay-footer-total">付款合计：￥{{total}}</view>
-        <view class="pay-footer-btn" bindtap="toPay">去付款</view>
+        <view class="pay-footer-total">合计：￥{{total}}</view>
+        <view class="pay-footer-btn" bindtap="toPay">确认提交</view>
     </view>
 </view>

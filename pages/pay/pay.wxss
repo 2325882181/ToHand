@@ -65,6 +65,15 @@
     width: 180rpx;
     height: 180rpx;
 }
+
+.pay-pro-num{
+  position: absolute;
+    top: 50rpx;
+    left: 670rpx;
+    width: 180rpx;
+    height: 180rpx;
+}
+
 .pay-list view{
     line-height: 60rpx;
 }

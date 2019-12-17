@@ -12,7 +12,8 @@
     <view class="list">
       <view class="productList" wx:for="{{productList ==''?productAll:productList}}"
       wx:key="{{index}}">
-        <image src="{{item.src}}" mode="widthFix"></image>
+        <image src="{{item.src}}" mode="widthFix" bindtap="todetail"
+        data-id="{{item.id}}"></image>
         <view class="info">
           <text>{{item.name}}</text>
           <text>￥{{item.price}}</text>
@@ -24,11 +25,11 @@
         </view>
       </view>
     </view>
-    <navigator class="bottom" url="../pay/pay">
+    <view class="bottom">
       <button class="btn" bindtap="buy">
       提交订单
       <text>￥{{totalPrice}}</text>
       </button>
-    </navigator>
+    </view>
   </view>
     

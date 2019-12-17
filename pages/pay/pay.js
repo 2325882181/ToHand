@@ -8,38 +8,27 @@ Page({
     address: {},
     hasAddress: false,
     total: 0,
-    productList: [{
-      "id": 1,
-      "name": "老鸭面",
-      "image": "../../images/menu/menu1.jpg",
-      "price": 12 
-    },
-      {
-        "id": 2,
-        "name": "麻婆豆腐",
-        "image": "../../images/menu/menu2.jpg",
-        "price": 25
-      },
-      {
-        "id": 3,
-        "name": "西式牛排",
-        "image": "../../images/menu/menu3.jpg",
-        "price": 25
-      },
-      {
-        "id": 4,
-        "name": "精品甜点",
-        "image": "../../images/menu/menu4.jpg",
-        "price": 10
-      }
-    ]
+    productList: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var product = JSON.parse(options.productAll);     //获得数组
+    //查看传值是否成功
+    console.log(product);         
+    var list = [];
+    for (var i = 0; i < product.length; i++) {
+      if (product[i].num > 0) {
+        list.push(product[i])
+      }
+    }
+    this.setData({
+      total: options.total,
+      productList: list
+    })
+    console.log(list)
   },
 
   /**
