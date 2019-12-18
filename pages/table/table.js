@@ -1,33 +1,55 @@
-// pages/health/health.js
+// pages/order/order.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    healthList: [
+    shanshilist:[
       {
-        "hid": 1,
-        "title": "全部"
+        "id": 1,
+        "title": "食品热量表",
       },
       {
-        "cid": 1,
-        "name": "汤面"
+        "id": 2,
+        "title": "膳食纤维表",
       },
       {
-        "cid": 2,
-        "name": "炒面"
+        "id":3,
+        "title": "宝妈专栏",
       },
       {
-        "cid": 3,
-        "name": "水饺"
+        "id": 4,
+        "title": "工作日安排",
       },
       {
-        "cid": 4,
-        "name": "大盘鸡"
-      }
+        "id": 5,
+        "title": "周末安排",
+      },
+      {
+        "id": 6,
+        "title": "血糖病人",
+      },
+
+      
+
     ],
+
   },
+
+  // 添加绑定事件,跳转详情页面
+  toshanshi: function (e) {
+    var list = JSON.stringify(this.data.shanshilist);        //获取餐品列表
+    let index = e.currentTarget.dataset.index;              //获取餐品index
+    console.log("index为：" + e.currentTarget.dataset.index);     //检验是否获取成功
+    wx.navigateTo({
+      url: '/pages/shanshi/shanshi?index=' + index + '&shanshilist=' + list
+    });
+  },
+
+
+  
+
 
   /**
    * 生命周期函数--监听页面加载

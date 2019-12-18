@@ -31,12 +31,30 @@ Page({
     console.log(list)
   },
 
-  // 跳转订单页
-  toPay: function () {
-    let list = JSON.stringify(this.data.productList);
-    wx.navigateTo({
-      url: '/pages/order/order?total=' + this.data.total + '&productList=' + list
-    });
+  // // 跳转订单页
+  // toPay: function () {
+  //   let list = JSON.stringify(this.data.productList);
+  //   wx.navigateTo({
+  //     url: '/pages/order/order?total=' + this.data.total + '&productList=' + list
+  //   });
+  // },
+
+  // 跳回主页
+  toPay: function() {
+    wx.showModal({
+      title: '提交订单',
+      content: '确认提交订单?',
+      success(res) {
+        if (res.confirm) {
+          console.log('用户点击确定'),
+            wx.switchTab({
+              url: '/pages/index/index'
+            })
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
   },
 
   /**

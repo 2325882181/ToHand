@@ -8,6 +8,7 @@
     "pages/foodcircle/foodcircle",
     "pages/pengyouquan/pengyouquan",
     "pages/health/health",
+    "pages/table/table",
     "pages/order/order",
     "pages/cart/cart",
     "pages/my/my",
@@ -37,7 +38,7 @@
         "selectedIconPath": "images/foodcircle_select.png"
       },
       {
-        "pagePath": "pages/health/health",
+        "pagePath": "pages/table/table",
         "text": "营养膳食",
         "iconPath": "images/community.png",
         "selectedIconPath": "images/community_select.png"
