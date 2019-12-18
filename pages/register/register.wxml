@@ -1,7 +1,7 @@
 <view class="container">
    <input class="user_name" bindinput="getName" placeholder="请输入用户名"></input>
    <view class="pwd">
-      <input class="user_pwd" bindblur="getMima" placeholder="请输入密码"></input>
+      <input class="user_pwd" bindblur="getMima" type="password" placeholder="请输入密码"></input>
    </view>
    <input class="user_name" bindinput="getZhangHao" placeholder="请输入手机号"></input>
    <view class="button">

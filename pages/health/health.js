@@ -1,32 +1,18 @@
-// pages/order/order.js
+// pages/health/health.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    total: 0,
-    productList: []
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var product = JSON.parse(options.productList);     //获得数组
-    //查看传值是否成功
-    console.log(product);
-    let list = [];
-    for (var i = 0; i < product.length; i++) {
-      if (product[i].num > 0) {
-        list.push(product[i])
-      }
-    }
-    this.setData({
-      total: options.total,
-      productList: list
-    })
-    console.log(list)
+
   },
 
   /**

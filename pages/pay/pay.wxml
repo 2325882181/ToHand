@@ -12,7 +12,7 @@
     <view class="pay-box">
         <view wx:for="{{productList}}" wx:key="index" class="productList-list">
             <image class="pay-thumb" src="{{item.src}}" mode="widthFix"></image>
-            <view class="pay-pro-name">{{item.name}}</view>
+            <view class="pay-pro-name">{{item.pname}}</view>
             <view class="pay-pro-price">￥{{item.price}}</view>
             <view class="pay-pro-num">X{{item.num}}</view>
         </view>

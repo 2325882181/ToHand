@@ -23,14 +23,17 @@
     <navigator url="/pages/address/address" hover-class="navigator-none">收货地址
     </navigator>
   </view>
+  <view class="my-item">
+    <navigator url="/pages/order/order" hover-class="navigator-none">我的订单</navigator>
+  </view>
   <view class="my-item" bindtap="attention">
-    <navigator url="/pages/asset/index" hover-class="navigator-none">我的关注</navigator>
+    <view>我的关注</view>
   </view>
   <view class="my-item" bindtap="comment">
-    <navigator url="/pages/asset/index" hover-class="navigator-none">我的评价</navigator>
+    <view>我的评价</view>
   </view>
   <view class="my-item" bindtap="ticket">
-    <navigator url="/pages/coupons/index" hover-class="navigator-none">领券中心</navigator>
+    <view>领券中心</view>
   </view>
   <view style="height:20rpx;background: #eee;width:100%;"></view>
   <view class="my-item" bindtap="aboutUs">

@@ -8,23 +8,23 @@ Page({
     // 分类的变量
     classType:[
       {
-        "id": 0,
+        "cid": 0,
         "name": "全部"
       },
       {
-       "id":1,
-       "name":"汤面"
+        "cid":1,
+        "name":"汤面"
       },
       {
-        "id": 2,
+        "cid": 2,
         "name": "炒面"
       },
       {
-        "id": 3,
+        "cid": 3,
         "name": "水饺"
       },
       {
-        "id":4,
+        "cid":4,
         "name":"大盘鸡"
       }
     ],
@@ -35,48 +35,54 @@ Page({
     // 初始数据
     productAll: [
       {
-        "id": 1,
-        "name": "牛肉拉面",
+        "pid": 1,
+        "cid": 1,
+        "pname": "牛肉拉面",
         "src": "../../images/menu/menu1.jpg",
         "price": 9,
         "classid": 1,
         "num": 0
       },
       {
-        "id": 2,
-        "name": "鸡蛋拉面",
+        "pid": 2,
+        "cid": 1,
+        "pname": "鸡蛋拉面",
         "src": "../../images/menu/menu2.jpg",
         "price": 8,
         "classid": 1,
         "num": 0
       },
       {
-        "id": 3,
-        "name": "牛肉炒刀削",
+        "pid": 3,
+        "cid": 1,
+        "pname": "牛肉炒刀削",
         "src": "../../images/menu/menu3.jpg",
         "price": 10,
         "classid": 2,
         "num": 0
       },
       {
-        "id": 4,
-        "name": "鸡蛋炒刀削",
+        "pid": 4,
+        "cid": 1,
+        "pname": "鸡蛋炒刀削",
         "src": "../../images/menu/menu4.jpg",
         "price": 10,
         "classid": 2,
         "num": 0
       },
       {
-        "id": 5,
-        "name": "水饺",
+        "pid": 5,
+        "cid": 1,
+        "pname": "水饺",
         "src": "../../images/menu/menu5.jpg",
         "price": 12,
         "classid": 3,
         "num": 0
       },
       {
-        "id": 6,
-        "name": "大盘鸡",
+        "pid": 6,
+        "cid": 1,
+        "pname": "大盘鸡",
         "src": "../../images/menu/menu6.jpg",
         "price": 50,
         "classid": 4,

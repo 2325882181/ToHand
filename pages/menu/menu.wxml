@@ -15,7 +15,7 @@
         <image src="{{item.src}}" mode="widthFix" bindtap="todetail"
         data-index="{{index}}"></image>
         <view class="info">
-          <text>{{item.name}}</text>
+          <text>{{item.pname}}</text>
           <text>￥{{item.price}}</text>
         </view>
         <view class="cart-count-box">

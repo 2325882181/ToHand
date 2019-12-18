@@ -11,12 +11,6 @@ Page({
     productList: []
   },
 
-  toPay: function () {
-    wx.switchTab({
-      url: '/pages/order/order'
-    });
-  },
-
   /**
    * 生命周期函数--监听页面加载
    */
@@ -24,7 +18,7 @@ Page({
     var product = JSON.parse(options.productAll);     //获得数组
     //查看传值是否成功
     console.log(product);         
-    var list = [];
+    let list = [];
     for (var i = 0; i < product.length; i++) {
       if (product[i].num > 0) {
         list.push(product[i])
@@ -35,6 +29,14 @@ Page({
       productList: list
     })
     console.log(list)
+  },
+
+  // 跳转订单页
+  toPay: function () {
+    let list = JSON.stringify(this.data.productList);
+    wx.navigateTo({
+      url: '/pages/order/order?total=' + this.data.total + '&productList=' + list
+    });
   },
 
   /**

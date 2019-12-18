@@ -7,6 +7,6 @@ Page({
       wx.switchTab({
         url: '../index/index',
       })
-    }, 1000);
+    }, 2000);
   },
 })

@@ -6,21 +6,18 @@ Page({
   },
   //获取用户名
   getName(event) {
-    console.log('获取输入的用户名', event.detail.value)
     this.setData({
       name: event.detail.value
     })
   },
   //获取手机号
   getZhangHao(event) {
-    console.log('获取输入的手机号', event.detail.value)
     this.setData({
       zhanghao: event.detail.value
     })
   },
   // 获取密码
   getMima(event) {
-    console.log('获取输入的密码', event.detail.value)
     this.setData({
       mima: event.detail.value
     })

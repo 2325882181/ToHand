@@ -1,0 +1,51 @@
+
+
+
+/* 图片和字的边框 */
+.itemRoot {
+ 
+  margin-bottom: 20rpx;
+}
+
+
+
+/* 显示用户头像 */
+.user_img{
+  height: 35px;
+  width: 35px;
+  position: relative;
+  top: 7px;
+  left: 5PX;
+}
+
+/* 显示文字 desc*/
+.desc{
+  position: relative;
+  left: 15px;
+  
+}
+
+/* 图片的容器 */
+.imgRoot {
+  margin-left: 100rpx;
+  margin-top: 10rpx;
+}
+
+.imgList {
+  display: inline-block;
+}
+
+/* 显示图片 */
+.img {
+  margin: 5rpx;
+  position: relative;
+  width: 155rpx;
+  height: 155rpx;
+}
+
+/* 返回按钮 */
+.back{
+  position: absolute;
+  bottom: 10rpx;
+  left: 230rpx;
+}

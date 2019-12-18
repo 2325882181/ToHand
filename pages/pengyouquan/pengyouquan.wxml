@@ -1,0 +1,22 @@
+
+<scroll-view scroll-y="true" style="height: 700px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+<!-- 此处存在编译器模拟器尺寸问题 -->
+<block wx:for="{{dataList}}" wx:key="index">
+  <view class="itemRoot">
+    <view>
+    <image class="user_img" src="cloud://optimus-j5h3j.6f70-optimus-j5h3j-1300871711/USER/7d577f67cedfea91.jpg"></image>
+      <text class="desc">{{item.desc}}</text>
+    </view>
+    <view class="imgRoot">
+      <block class="imgList" wx:for="{{item.fileIDs}}" wx:for-item="itemImg" wx:key="index">
+        <image class="img" src='{{itemImg}}' mode='aspectFill' data-img='{{[itemImg,item.fileIDs]}}'                       bindtap="previewImg"></image>
+      </block>
+    </view>
+  </view>
+</block>
+</scroll-view>
+<!-- 返回美食圈发布 -->
+<view>
+    <button class="back" bindtap="back" type="primary">发布我的美食圈</button>
+</view> 
+

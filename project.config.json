@@ -20,11 +20,12 @@
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
-		}
+		},
+		"enhance": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.9.4",
-	"appid": "wx1d9bc42eb9a356bb",
+	"appid": "wx1b8865290d3c65da",
 	"projectname": "xiaopang1",
 	"cloudfunctionTemplateRoot": "",
 	"watchOptions": {

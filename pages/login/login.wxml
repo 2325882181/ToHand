@@ -2,7 +2,7 @@
    <text>欢迎登陆到手送</text>
    <input class="user_name" bindinput="getZhangHao" placeholder="请输入手机号"></input>
    <view class="pwd">
-      <input class="user_pwd" bindblur="getMima" placeholder="请输入密码"></input>
+      <input class="user_pwd" bindblur="getMima" type="password" placeholder="请输入密码"></input>
    </view>
    <view class="button">
     <button class="btn" bindtap="toregister">注册</button>
